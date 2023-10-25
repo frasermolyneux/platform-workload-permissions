@@ -31,7 +31,7 @@ subscriptions = {
 
 service_principals = [
   {
-    name = "spn-azure-landing-zones-production"
+    name = "spn-platform-landing-zones-production"
   },
   {
     name = "spn-demo-manager-production"
@@ -138,7 +138,7 @@ service_principals = [
     name = "spn-platform-strategic-services-development"
   },
   {
-    name = "spn-platform-strategic-services-permissions-production"
+    name = "spn-platform-workload-permissions-production"
   },
   {
     name = "spn-platform-strategic-services-production"
