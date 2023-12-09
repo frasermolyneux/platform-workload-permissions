@@ -151,11 +151,6 @@ service_principals = [
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
       { // Required to create Front Door configuration for external facing services
         role_definition_name = "CDN Profile Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-frontdoor-dev-uksouth-01"
@@ -175,10 +170,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      },
       { // Required to create Front Door configuration for external facing services
         role_definition_name = "CDN Profile Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-frontdoor-prd-uksouth-01"
@@ -197,11 +188,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
       },
       { // Required to be able to create SQL Databases
@@ -230,10 +216,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-sql-prd-uksouth-01"
@@ -260,11 +242,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
       }
     ]
   },
@@ -274,10 +251,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
       }
     ]
   },
@@ -291,11 +264,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
       },
       { // Required to create Front Door configuration for external facing services
@@ -321,10 +289,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      },
       { // Required to create Front Door configuration for external facing services
         role_definition_name = "CDN Profile Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-frontdoor-prd-uksouth-01"
@@ -344,11 +308,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
       }
     ]
   },
@@ -358,10 +317,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
       }
     ]
   },
@@ -375,11 +330,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-plans-dev-uksouth-01"
         provider             = "sub-visualstudio-enterprise"
       },
       { // Required to be able to create SQL Databases
@@ -411,10 +361,6 @@ service_principals = [
       { // Required to publish APIs and create subscriptions
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
       },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
