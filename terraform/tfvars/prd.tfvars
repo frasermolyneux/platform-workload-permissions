@@ -192,15 +192,6 @@ service_principals = [
     ]
   },
   {
-    name = "spn-portal-event-ingest-productionwebapps"
-    role_assignments = [
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
-    ]
-  },
-  {
     name = "spn-portal-repository-development"
     role_assignments = [
       { // Required to publish APIs and create subscriptions
@@ -263,15 +254,6 @@ service_principals = [
     ]
   },
   {
-    name = "spn-portal-repository-productionwebapps"
-    role_assignments = [
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
-    ]
-  },
-  {
     name = "spn-portal-repository-func-development"
     role_assignments = [
       { // Required to publish APIs and create subscriptions
@@ -293,15 +275,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
-    ]
-  },
-  {
-    name = "spn-portal-repository-func-productionwebapps"
-    role_assignments = [
       { // Required to create web apps for the app service plan
         role_definition_name = "Website Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
@@ -365,19 +338,6 @@ service_principals = [
     ]
   },
   {
-    name = "spn-portal-servers-integration-productionwebapps"
-    role_assignments = [
-      { // Required to pull Bicep modules from the ACR
-        role_definition_name = "AcrPull",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
-      },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
-    ]
-  },
-  {
     name = "spn-portal-sync-development"
     role_assignments = [
       { // Required to publish APIs and create subscriptions
@@ -399,15 +359,6 @@ service_principals = [
         role_definition_name = "API Management Service Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
-    ]
-  },
-  {
-    name = "spn-portal-sync-productionwebapps"
-    role_assignments = [
       { // Required to create web apps for the app service plan
         role_definition_name = "Website Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
@@ -482,15 +433,6 @@ service_principals = [
     ],
     aad_memberships = [
       "sg-sql-platform-admins-prd-01" // Required to allow DACPAC deployments to the SQL database
-    ]
-  },
-  {
-    name = "spn-xtremeidiots-portal-productionwebapps"
-    role_assignments = [
-      { // Required to create web apps for the app service plan
-        role_definition_name = "Website Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-plans-prd-uksouth-01"
-      }
     ]
   },
   {
