@@ -9,10 +9,7 @@ tags = {
   Git         = "https://github.com/frasermolyneux/platform-strategic-services-permissions"
 }
 
-aad_groups = [
-  "sg-sql-platform-admins-dev-01",
-  "sg-sql-platform-admins-prd-01"
-]
+aad_groups = []
 
 subscriptions = {
   sub-platform-connectivity = {
@@ -129,35 +126,21 @@ service_principals = [
   {
     name = "spn-portal-repository-development"
     role_assignments = [
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-sql-dev-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
         provider             = "sub-platform-connectivity"
       }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-dev-01" // Required to allow DACPAC deployments to the SQL database
     ]
   },
   {
     name = "spn-portal-repository-production"
     role_assignments = [
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-sql-prd-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
         provider             = "sub-platform-connectivity"
       }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-prd-01" // Required to allow DACPAC deployments to the SQL database
     ]
   },
   {
@@ -211,18 +194,11 @@ service_principals = [
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
       },
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-sql-dev-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
         provider             = "sub-platform-connectivity"
       }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-dev-01" // Required to allow DACPAC deployments to the SQL database
     ]
   },
   {
@@ -232,18 +208,11 @@ service_principals = [
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
       },
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-sql-prd-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
         provider             = "sub-platform-connectivity"
       }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-prd-01" // Required to allow DACPAC deployments to the SQL database
     ]
   },
   {
@@ -256,27 +225,11 @@ service_principals = [
     ]
   },
   {
-    name = "spn-personal-finances-development"
-    role_assignments = [
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-sql-dev-uksouth-01"
-      }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-dev-01" // Required to allow DACPAC deployments to the SQL database
-    ]
+    name             = "spn-personal-finances-development"
+    role_assignments = []
   },
   {
-    name = "spn-personal-finances-production"
-    role_assignments = [
-      { // Required to be able to create SQL Databases
-        role_definition_name = "SQL DB Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-sql-prd-uksouth-01"
-      }
-    ],
-    aad_memberships = [
-      "sg-sql-platform-admins-prd-01" // Required to allow DACPAC deployments to the SQL database
-    ]
+    name             = "spn-personal-finances-production"
+    role_assignments = []
   }
 ]
