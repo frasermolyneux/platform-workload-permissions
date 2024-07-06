@@ -49,11 +49,6 @@ service_principals = [
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
       },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
@@ -67,10 +62,6 @@ service_principals = [
       { // Required to pull Bicep modules from the ACR
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
-      },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
@@ -118,11 +109,6 @@ service_principals = [
   {
     name = "spn-portal-event-ingest-development"
     role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
@@ -133,10 +119,6 @@ service_principals = [
   {
     name = "spn-portal-event-ingest-production"
     role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
@@ -147,11 +129,6 @@ service_principals = [
   {
     name = "spn-portal-repository-development"
     role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
         scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-sql-dev-uksouth-01"
@@ -169,10 +146,6 @@ service_principals = [
   {
     name = "spn-portal-repository-production"
     role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-sql-prd-uksouth-01"
@@ -188,23 +161,12 @@ service_principals = [
     ]
   },
   {
-    name = "spn-portal-repository-func-development"
-    role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      }
-    ]
+    name             = "spn-portal-repository-func-development"
+    role_assignments = []
   },
   {
-    name = "spn-portal-repository-func-production"
-    role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      }
-    ]
+    name             = "spn-portal-repository-func-production"
+    role_assignments = []
   },
   {
     name = "spn-portal-servers-integration-development"
@@ -212,11 +174,6 @@ service_principals = [
       { // Required to pull Bicep modules from the ACR
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
-      },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
       },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
@@ -232,10 +189,6 @@ service_principals = [
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
       },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      },
       { // Required to create DNS configuration for external facing services
         role_definition_name = "DNS Zone Contributor",
         scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01"
@@ -244,23 +197,12 @@ service_principals = [
     ]
   },
   {
-    name = "spn-portal-sync-development"
-    role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
-      }
-    ]
+    name             = "spn-portal-sync-development"
+    role_assignments = []
   },
   {
-    name = "spn-portal-sync-production"
-    role_assignments = [
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
-      }
-    ]
+    name             = "spn-portal-sync-production"
+    role_assignments = []
   },
   {
     name = "spn-xtremeidiots-portal-development"
@@ -268,11 +210,6 @@ service_principals = [
       { // Required to pull Bicep modules from the ACR
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
-      },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/d68448b0-9947-46d7-8771-baa331a3063a/resourceGroups/rg-platform-apim-dev-uksouth-01"
-        provider             = "sub-visualstudio-enterprise"
       },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
@@ -294,10 +231,6 @@ service_principals = [
       { // Required to pull Bicep modules from the ACR
         role_definition_name = "AcrPull",
         scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-acr-prd-uksouth-01/providers/Microsoft.ContainerRegistry/registries/acrty7og2i6qpv3s"
-      },
-      { // Required to publish APIs and create subscriptions
-        role_definition_name = "API Management Service Contributor",
-        scope                = "/subscriptions/903b6685-c12a-4703-ac54-7ec1ff15ca43/resourceGroups/rg-platform-apim-prd-uksouth-01"
       },
       { // Required to be able to create SQL Databases
         role_definition_name = "SQL DB Contributor",
