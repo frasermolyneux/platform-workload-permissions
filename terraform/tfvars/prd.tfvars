@@ -231,5 +231,23 @@ service_principals = [
   {
     name             = "spn-personal-finances-production"
     role_assignments = []
+  },
+  {
+    name = "spn-molyneux-me-development"
+    role_assignments = [
+      { // Required to create DNS configuration for external facing services
+        role_definition_name = "DNS Zone Contributor",
+        scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01/providers/Microsoft.Network/dnszones/molyneux.me"
+        provider             = "sub-platform-connectivity"
+    }]
+  },
+  {
+    name = "spn-molyneux-me-production"
+    role_assignments = [
+      { // Required to create DNS configuration for external facing services
+        role_definition_name = "DNS Zone Contributor",
+        scope                = "/subscriptions/db34f572-8b71-40d6-8f99-f29a27612144/resourceGroups/rg-platform-dns-prd-uksouth-01/providers/Microsoft.Network/dnszones/molyneux.me"
+        provider             = "sub-platform-connectivity"
+    }]
   }
 ]
