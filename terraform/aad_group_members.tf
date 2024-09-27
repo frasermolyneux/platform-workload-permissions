@@ -13,6 +13,6 @@ locals {
 resource "azuread_group_member" "group_membership" {
   for_each = { for each in local.aad_group_memberships : each.key => each }
 
-  group_object_id  = data.azuread_group.groups[each.value.aad_group].id
+  group_object_id  = data.azuread_group.groups[each.value.aad_group].object_id
   member_object_id = data.azuread_service_principal.workload[each.value.principal_name].object_id
 }
